@@ -1,8 +1,32 @@
 <html>
 <head>
-
+    <title>Calculo do IMC</title>
 </head>
 <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+        function CalcularIMC() {
+            var altura = $('#altura').val();
+            var peso = $('#peso').val();
+            var alturaEmMetros = altura / 100;
+            alert("Seu IMC é: " + peso / (alturaEmMetros * alturaEmMetros));
+        }
+    </script>
+
+    <h1>Unigran</h1>
+    <h2>Gerencia de Configuracao</h2>
+    <h3>Professor: André Martins do Nacimento</h3>
+
+    <br /><br />
+    Calcule seu IMC. Por favor informe os valores abaixo:
+    <br />
+    <br />
+    Altura (cm): <input id="altura" type="number" />
+    <br /><br />
+    Peso (kg): <input id="peso" type="number" />
+    <br /><br />
+    <input type="button" value="Calcular" onclick="CalcularIMC();" />
 
 </body>
 </html>
